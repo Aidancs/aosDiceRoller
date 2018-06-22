@@ -1,3 +1,30 @@
 page-hit {
+  .rollButton {
+    width: 127px;
+    height: 44px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.2);
+    background-color: #3b6984;
+    border: solid 1px #5898be;
+  }
 
+  .row {
+    margin-top: 44px
+  }
+
+  .Combined-Shape {
+    margin-top: 0px;
+    height: 82px;
+    background-image: linear-gradient(to bottom, #3b3149, #4c405e);
+  }
+
+  .title-image-1 {
+    position:relative; /* and this has to be relative */
+    z-index: 1;
+  }
+
+  .title-image-2 {
+    position:absolute;
+    z-index: 2;
+  }
 }

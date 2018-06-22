@@ -20,6 +20,7 @@ import { WoundPage } from '../wound/wound';
     wounds: number = 0;
     totalDice: number = 0;
     toHit: number;
+    extraHits: boolean = false;
 
   constructor(public navCtrl: NavController) {}
 
@@ -42,16 +43,18 @@ import { WoundPage } from '../wound/wound';
     }
   }
 
-  rerollDice() {
+  rerollOnes() {
     let totalOnes = this.ones;
     this.ones = 0;
     this.rollDice(totalOnes);
   }
 
   extraHitsOnSixes() {
-    let totalSixes = this.sixes;
-    this.sixes = 0;
-    this.rollDice(totalSixes);
+    if (!this.extraHits) {
+      this.extraHits = true;
+      let totalSixes = this.sixes;
+      this.rollDice(totalSixes);
+    }
   }
 
   reset() {
@@ -64,6 +67,7 @@ import { WoundPage } from '../wound/wound';
     this.rolls = 0;
     this.toHit = 0;
     this.hits = 0;
+    this.extraHits = false;
   }
 
   diceChecker(numOfDice) {

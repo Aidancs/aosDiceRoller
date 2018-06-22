@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 375 89" xmlns="http://www.w3.org/2000/svg">
+<title>Rectangle 5</title>
+<desc>Created with Sketch.</desc>
+<defs>
+<linearGradient id="a" x1="50%" x2="50%" y1="20.156%" y2="31.621%">
+<stop stop-color="#782C5D" offset="0"/>
+<stop stop-color="#621A43" offset="1"/>
+</linearGradient>
+</defs>
+<g fill="none" fill-rule="evenodd" opacity=".5048">
+<g transform="translate(0 -578)" fill="url(#a)">
+<path d="m-315 605.51l98.715-28.567c27.336-7.9108 56.748-3.8004 80.867 11.302l39.46 24.707c31.356 19.633 70.99 20.35 103.04 1.8643l32.218-18.585c33.563-19.361 75.29-17.591 107.09 4.5433l8.1079 5.6429c33.393 23.241 77.538 23.934 111.64 1.7529l20.817-13.538c28.823-18.746 65.256-21.369 96.467-6.946l38.574 17.825v77h-737v-77z"/>
+</g>
+</g>
+</svg>

@@ -18,13 +18,13 @@ export class WoundPage {
       wounds: number = 0;
       totalDice: number = 0;
       toWound: number;
+      extraWounds: boolean = false;
 
     constructor(
       public alertCtrl: AlertController,
       public navCtrl: NavController,
       public navParams: NavParams
     ) {
-      this.reset();
       this.rolls = navParams.get("rolls");
     }
 
@@ -47,11 +47,7 @@ export class WoundPage {
       }
 
       if (this.ones === 0) {
-        let alert = this.alertCtrl.create({
-            title: 'Total: ' + this.wounds,
-            buttons: ['Dismiss'],
-          });
-          alert.present();
+        this.total();
       }
     }
 
@@ -61,10 +57,12 @@ export class WoundPage {
       this.rollDice(totalOnes);
     }
 
-    extraHitsOnSixes() {
-      let totalSixes = this.sixes;
-      this.sixes = 0;
-      this.rollDice(totalSixes);
+    extraWoundsOnSixes() {
+      if (!this.extraWounds) {
+        this.extraWounds = true;
+        let totalSixes = this.sixes;
+        this.rollDice(totalSixes);
+      }
     }
 
     total() {
