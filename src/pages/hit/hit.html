@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <p style="text-align: center">Age of Sigmar</p>
+      <p style="text-align: center">Dice Roller</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label for="rolls">How many rolls?</ion-label>
+    <ion-input type="number" name="rolls" [(ngModel)]="rolls"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label for="toHit">To Hit</ion-label>
+    <ion-input type="number" name="toHit" [(ngModel)]="toHit"></ion-input>
+  </ion-item>
+  <button ion-button (tap)="rollDice(rolls)">Roll</button>
+  <h3 class="badge">Hits: {{ hits }} </h3>
+  <h3 class="badge">6's: {{ sixes }} </h3>
+  <h3 class="badge">5's: {{ fives }} </h3>
+  <h3 class="badge">4's: {{ fours }} </h3>
+  <h3 class="badge">3's: {{ threes }} </h3>
+  <h3 class="badge">2's: {{ twos }} </h3>
+  <h3 class="badge">1's: {{ ones }} </h3>
+  <button ion-button (tap)="rerollDice()">Reroll</button>
+  <button ion-button (tap)="reset()">Reset rolls</button>
+  <button ion-button (tap)="toWoundPage()">To Wound Page</button>
+</ion-content>
