@@ -83,6 +83,7 @@ export class WoundPage {
       this.rolls = 0;
       this.toWound = 0;
       this.wounds = 0;
+      this.toHitPage();
     }
 
     diceChecker(numOfDice) {
@@ -107,5 +108,4 @@ export class WoundPage {
     toHitPage() {
       this.navCtrl.pop();
     }
-
 }

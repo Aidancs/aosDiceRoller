@@ -1,52 +1,55 @@
 page-hit {
-  .rollButton {
-    width: 127px;
-    height: 44px;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.2);
-    background-color: #3b6984;
-    border: solid 1px #5898be;
-  }
+	.rollButton {
+		width: 127px;
+		height: 44px;
+		border-radius: 4px;
+		box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.2);
+		background-color: #3b6984;
+		border: solid 1px #5898be;
+	}
 
-  .rollsandhits {
-    color: white;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+	.rollsandhits {
+		color: white;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
 
-  .row {
-      margin-top: 44px
-  }
+	.row {
+		margin-top: 44px;
+	}
 
-  .main-div {
-    z-index: -1;
-  }
+	.main-div {
+		z-index: -1;
+	}
 
-  .Combined-Shape {
-    margin-top: 0px;
-    width: 100%;
-    height: auto;
-    background-image: linear-gradient(to bottom, #3b3149, #4c405e);
-    z-index: 1;
-  }
+	.Combined-Shape {
+		margin-top: 0;
+		width: 100%;
+		height: auto;
+		// background-image: linear-gradient(to bottom, #3b3149, #4c405e);
+		z-index: 1;
+	}
 
-  .title-image {
+	.title-image {}
 
-  }
+	.title-image-1 {
+		position: relative;
+		/* and this has to be relative */
+		z-index: 1;
+	}
 
-  .title-image-1 {
-    position:relative; /* and this has to be relative */
-    z-index: 1;
-  }
+	.title-image-2 {
+		position: absolute;
+		z-index: 2;
+	}
 
-  .title-image-2 {
-    position:absolute;
-    z-index: 2;
-  }
+	.footer {
+		width: 100%;
+		height: auto;
+	}
 
-  .footer {
-    width: 100%;
-    height: auto;
-    margin-top: 175px;
+  .dice {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
