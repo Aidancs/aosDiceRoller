@@ -20,6 +20,8 @@ import { WoundPage } from '../wound/wound';
     wounds: number = 0;
     totalDice: number = 0;
     toHit: number;
+    rerollOnesBoolean: boolean = false;
+    oneTimeReroll: boolean = true;
     extraHits: boolean = false;
 
   constructor(public navCtrl: NavController) {}
@@ -44,9 +46,13 @@ import { WoundPage } from '../wound/wound';
   }
 
   rerollOnes() {
-    let totalOnes = this.ones;
-    this.ones = 0;
-    this.rollDice(totalOnes);
+    if(this.rerollOnesBoolean && this.oneTimeReroll) {
+      let totalOnes = this.ones;
+      this.ones = 0;
+      this.rollDice(totalOnes);
+    }
+    this.oneTimeReroll = false;
+    this.rerollOnesBoolean = false;
   }
 
   extraHitsOnSixes() {
@@ -68,6 +74,7 @@ import { WoundPage } from '../wound/wound';
     this.toHit = 0;
     this.hits = 0;
     this.extraHits = false;
+    this.oneTimeReroll = true;
   }
 
   diceChecker(numOfDice) {
@@ -75,6 +82,9 @@ import { WoundPage } from '../wound/wound';
       let num = Math.floor((Math.random() * 6) + 1);
       if (num == 1) {
         ++this.ones;
+        if (this.oneTimeReroll) {
+          this.rerollOnesBoolean = true;
+        }
       } else if (num == 2) {
         ++this.twos;
       } else if (num == 3) {

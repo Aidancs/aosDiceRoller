@@ -37,11 +37,11 @@
 			<img class="title-image" src="./assets/imgs/2black.svg" width="100%" height="45px" />
 			<h3 class="dice" style="color: white">{{ twos ? twos : '00' }}</h3>
 		</div>
-		<div *ngIf="!ones" class="col">
+		<div *ngIf="ones && !oneTimeReroll" class="col">
 			<img class="title-image" src="./assets/imgs/1black.svg" width="100%" height="45px" />
 			<h3 class="dice" style="color: white">{{ ones ? ones : '00' }}</h3>
 		</div>
-		<div *ngIf="ones" class="col">
+		<div *ngIf="ones && oneTimeReroll" class="col">
 			<img class="title-image" src="./assets/imgs/1pink.svg" width="100%" height="45px" (tap)="rerollOnes()"/>
 			<h3 class="dice" style="color: white">{{ ones ? ones : '00' }}</h3>
 		</div>
